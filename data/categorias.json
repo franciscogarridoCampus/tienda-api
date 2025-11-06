@@ -1,4 +1,14 @@
 [
-{ "id": 1, "nombre": "Periféricos" },
-{ "id": 2, "nombre": "Componentes" }
+  {
+    "id": 1,
+    "nombre": "Periféricos"
+  },
+  {
+    "id": 2,
+    "nombre": "Componentes"
+  },
+  {
+    "id": 3,
+    "nombre": "Piezas reemplazables del tiron en un instante"
+  }
 ]
