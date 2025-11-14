@@ -1,22 +1,22 @@
 //Clase completa, hacer las demás
-const productosService = require('../services/clientesService');
+const clientesService = require('../services/clientesService');
 exports.obtenerTodos = (req, res) => {
-const productos = productosService.listar();
-res.json(productos);
+const clientes = clientesService.listar();
+res.json(clientes);
 };
 exports.obtenerPorId = (req, res) => {
-const producto = productosService.buscarPorId(parseInt(req.params.id));
-producto ? res.json(producto) : res.status(404).json({ mensaje: 'No encontrado' });
+const cliente = clientesService.buscarPorId(parseInt(req.params.id));
+cliente ? res.json(cliente) : res.status(404).json({ mensaje: 'No encontrado' });
 };
 exports.crear = (req, res) => {
-const nuevo = productosService.crear(req.body);
+const nuevo = clientesService.crear(req.body);
 res.status(201).json(nuevo);
 };
 exports.actualizar = (req, res) => {
-const actualizado = productosService.actualizar(parseInt(req.params.id), req.body);
+const actualizado = clientesService.actualizar(parseInt(req.params.id), req.body);
 actualizado ? res.json(actualizado) : res.status(404).json({ mensaje: 'No encontrado' });
 };
 exports.eliminar = (req, res) => {
-const eliminado = productosService.eliminar(parseInt(req.params.id));
+const eliminado = clientesService.eliminar(parseInt(req.params.id));
 eliminado ? res.json(eliminado) : res.status(404).json({ mensaje: 'No encontrado' });
 };
