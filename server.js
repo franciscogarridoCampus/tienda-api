@@ -1,5 +1,9 @@
 const express = require('express');
+const cors= require('cors'); //Linea añadida para cors
 const app = express();
+
+
+app.use(cors()); //Linea añadida para los cors
 app.use(express.json());
 // Importar rutas
 app.use('/productos', require('./routes/productosRoutes'));
