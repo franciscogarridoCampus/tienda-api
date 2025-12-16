@@ -18,3 +18,5 @@ app.use('/usuarios', require('./routes/usuariosRoutes'));
 
 // Mejora solicitada, guardar en un log de JSON todas las llamadas a la API
 app.listen(3000, () => console.log('Servidor escuchando en http://localhost:3000'));
+
+//isntale la lbirearia json web token y en usuarios cotnroller lo inclui
